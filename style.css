@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #e0e8ff;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  max-width: Min(85%, 450px);
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: rgba(31, 47, 86, 0.15) 0px 10px 30px, rgba(31, 47, 86, 0.2) 0px 0px 10px;
+          box-shadow: rgba(31, 47, 86, 0.15) 0px 10px 30px, rgba(31, 47, 86, 0.2) 0px 0px 10px;
+}
+
+.card__img {
+  max-width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card__content {
+  padding: 1.7rem 1.5rem 1.2rem 1.5rem;
+  text-align: center;
+}
+
+.card__item + .card__item {
+  margin-top: 1.5rem;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #1f2f56;
+}
+
+.text {
+  color: #7280a7;
+  line-height: 1.5;
+}
+
+.plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem;
+  background-color: #f5f7ff;
+  font-size: 0.9rem;
+  border-radius: 10px;
+}
+
+.plan__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 10rem;
+      flex-basis: 10rem;
+}
+
+.plan__text {
+  margin-left: 1rem;
+}
+
+.text--bold {
+  font-weight: 700;
+  color: #1f2f56;
+}
+
+.plan_rigth {
+  -ms-flex-preferred-size: 5rem;
+      flex-basis: 5rem;
+}
+
+.link {
+  color: #3829e0;
+  font-weight: 700;
+}
+
+.link:hover {
+  color: #786dee;
+  text-decoration: none;
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button + .button {
+  margin-top: 0.5rem;
+}
+
+.button--main {
+  color: white;
+  background-color: #3829e0;
+  -webkit-box-shadow: rgba(56, 41, 224, 0.15) 0px 15px 10px;
+          box-shadow: rgba(56, 41, 224, 0.15) 0px 15px 10px;
+}
+
+.button--main:hover {
+  background-color: #786dee;
+}
+
+.button--secondary {
+  color: #7280a7;
+  background-color: transparent;
+}
+
+.button--secondary:hover {
+  color: #1f2f56;
+}
+
+.attribution {
+  margin: 0.5rem;
+  color: #1f2f56;
+  font-family: "Red Hat Display", sans-serif;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3829e0;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background: url("./images/pattern-background-desktop.svg"), #e0e8ff;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .card__content {
+    padding: 2.5rem 3rem 2rem 3rem;
+  }
+  .title {
+    font-size: 1.7rem;
+  }
+  .plan {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+  .link {
+    font-size: 0.9rem;
+  }
+  .button + .button {
+    margin-top: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,169 @@
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+$hover: hsl(245, 79%, 68%);
+$font: "Red Hat Display", sans-serif;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $pale-blue;
+  font-family: $font;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  max-width: Min(85%, 450px);
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: hsla(223, 47%, 23%, 0.15) 0px 10px 30px,
+    hsla(223, 47%, 23%, 0.2) 0px 0px 10px;
+}
+
+.card__img {
+  max-width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card__content {
+  padding: 1.7rem 1.5rem 1.2rem 1.5rem;
+  text-align: center;
+}
+
+.card__item + .card__item {
+  margin-top: 1.5rem;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: $dark-blue;
+}
+
+.text {
+  color: $desaturated-blue;
+  line-height: 1.5;
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: $very-pale-blue;
+  font-size: 0.9rem;
+  border-radius: 10px;
+}
+
+.plan__left {
+  display: flex;
+  align-items: center;
+  flex-basis: 10rem;
+}
+
+.plan__text {
+  margin-left: 1rem;
+}
+
+.text--bold {
+  font-weight: 700;
+  color: $dark-blue;
+}
+
+.plan_rigth {
+  flex-basis: 5rem;
+}
+
+.link {
+  color: $bright-blue;
+  font-weight: 700;
+  &:hover {
+    color: $hover;
+    text-decoration: none;
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button + .button {
+  margin-top: 0.5rem;
+}
+
+.button--main {
+  color: white;
+  background-color: $bright-blue;
+  box-shadow: hsla(245, 75%, 52%, 0.15) 0px 15px 10px;
+  &:hover {
+    background-color: $hover;
+  }
+}
+
+.button--secondary {
+  color: $desaturated-blue;
+  background-color: transparent;
+  &:hover {
+    color: $dark-blue;
+  }
+}
+
+.attribution {
+  margin: 0.5rem;
+  color: $dark-blue;
+  font-family: $font;
+  text-align: center;
+  a {
+    color: $bright-blue;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background: url("./images/pattern-background-desktop.svg"), $pale-blue;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .card__content {
+    padding: 2.5rem 3rem 2rem 3rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .plan {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .link {
+    font-size: 0.9rem;
+  }
+
+  .button + .button {
+    margin-top: 1rem;
+  }
+}
